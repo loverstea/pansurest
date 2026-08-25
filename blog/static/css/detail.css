@@ -1,0 +1,178 @@
+.photo-detail {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.photo-detail-card {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+
+.photo-detail-image {
+    background: #f5f5f5;
+
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-detail-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 750px;
+
+    object-fit: contain;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    transition: transform 0.3s ease;
+}
+
+.photo-detail-image img:hover {
+    transform: scale(1.015);
+}
+
+
+
+
+.photo-detail-info {
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.photo-detail-info h2 {
+    margin: 0 0 12px;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    color: #222;
+}
+
+.photo-author {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.photo-description {
+    color: #555;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+
+.rating {
+    border-top: 1px solid #eee;
+
+    padding-top: 25px;
+    margin-top: 10px;
+}
+
+.rating p {
+    font-size: 16px;
+    color: #555;
+}
+
+.rating-score {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.stars-display {
+    font-size: 25px;
+
+    letter-spacing: 3px;
+}
+
+.rating-count {
+    color: #888;
+    font-size: 14px;
+}
+
+
+
+
+.rate-title {
+    margin-top: 25px;
+    margin-bottom: 8px;
+
+    font-weight: 600;
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+}
+
+.stars button {
+    border: none;
+    background: transparent;
+
+    color: #f5b301;
+
+    font-size: 32px;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+.stars button:hover {
+    background: transparent;
+
+    color: #ffcc33;
+
+    transform: scale(1.25);
+}
+
+
+
+
+.photo-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.photo-actions .btn {
+    display: inline-block;
+
+    padding: 11px 18px;
+
+    background: #4f46e5;
+    color: white;
+
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+}
+
+.photo-actions .btn:hover {
+    background: #3730a3;
+
+    transform: translateY(-2px);
+}
+

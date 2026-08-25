@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ profile_user.username }}</h1>
+
+<p>Photos: {{ photos|length }}</p>
+
+<hr>
+
+{% for photo in photos %}
+
+    <div>
+        <h3>{{ photo.title }}</h3>
+        <img src="{{ photo.image.url }}" width="200">
+        <p>{{ photo.description }}</p>
+    </div>
+
+{% endfor %}
+
+{% endblock %}

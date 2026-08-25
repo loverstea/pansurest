@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+nav {
+    background: white;
+    padding: 15px;
+
+    box-shadow: 0 2px 15px rgba(0,0,0,.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.login-card {
+    width: 380px;
+
+    margin: 60px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+    transition: 0.3s;
+}
+
+.login-card:hover {
+    transform: translateY(-4px);
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.15);
+}
+
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+
+    transition: 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+.card h3 {
+    margin: 10px 15px 5px;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 0 15px 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+.card small {
+    display: block;
+    margin: 0 15px 15px;
+    color: #888;
+    font-size: 12px;
+}
+
+.card:hover h3 {
+    color: #4f46e5;
+}
+
+button {
+    padding: 8px 12px;
+    border-radius: 10px;
+
+    background: #4f46e5;
+    color: white;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+
+.photo-detail {
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.photo-detail img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.photo-detail h2 {
+    margin-top: 15px;
+}
+
+.photo-detail p {
+    color: #666;
+}

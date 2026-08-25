@@ -1,0 +1,2 @@
+venv\Scripts\activate
+pythn manage.py runserver

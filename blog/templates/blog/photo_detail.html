@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="photo-page">
+
+    <div>
+        <a href="{% url 'photo_list' %}" class="btn">⬅ Back</a>
+    </div>
+
+    <div class="photo-card">
+
+        <div class="photo-image-container">
+            <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+        </div>
+
+        <div class="photo-info">
+
+            <h1>{{ photo.title }}</h1>
+
+            <p class="author">
+                By <strong>{{ photo.user.username }}</strong>
+            </p>
+
+            {% if photo.description %}
+                <p class="description">
+                    {{ photo.description }}
+                </p>
+            {% endif %}
+
+            <div class="rating">
+
+                {% if average_rating %}
+                    <div class="rating-score">
+                        <span class="stars-display">★★★★★</span>
+
+                        <strong>
+                            {{ average_rating|floatformat:1 }}
+                        </strong>
+
+                        <span class="rating-count">
+                            ({{ rating_count }} ratings)
+                        </span>
+                    </div>
+                {% else %}
+                    <p>No ratings yet.</p>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                    <p class="rate-title">Rate this photo:</p>
+
+                    <form method="POST" action="{% url 'rate' photo.id %}">
+                        {% csrf_token %}
+
+                        <div class="stars">
+                            <button type="submit" name="value" value="1">★</button>
+                            <button type="submit" name="value" value="2">★</button>
+                            <button type="submit" name="value" value="3">★</button>
+                            <button type="submit" name="value" value="4">★</button>
+                            <button type="submit" name="value" value="5">★</button>
+                        </div>
+                    </form>
+                {% endif %}
+                
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

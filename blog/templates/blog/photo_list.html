@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Photos</h1>
+
+<div class="grid">
+
+    {% for photo in photos %}
+        <div>
+            <a href="{% url 'photo_detail' photo.id %}">
+                <div class="card">
+                    <img src="{{ photo.image.url }}">
+                    <h3>{{ photo.title }}</h3>
+                    <p>{{ photo.description }}</p>
+                </div>
+            </a>
+            {% if request.user == photo.user or request.user.is_staff %}
+                <a href="{% url 'edit_photo' photo.id %}">Edit</a>
+                <a href="{% url 'delete_photo' photo.id %}">Delete</a>
+            {% endif %}
+            <small>
+                {{ photo.user.username }}
+            </small>
+        </div>
+
+    {% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}
